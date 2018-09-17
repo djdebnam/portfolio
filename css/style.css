@@ -1,0 +1,209 @@
+/*
+    MAIN - Import all scss abstracts
+*/
+/*
+MIXINS - reusable blocks of code
+ 
+> responsive: when the size matches  
+    0-600px: Phone
+    600-900px: Table portrait
+    900-1200px: Table landscape
+    1200-1800px: normal styles
+    >= 1800px: Big desktop
+ 
+    $breakpoint argument choices: 
+    -phone
+    -sm
+    -med
+    -lg
+*/
+/*
+VARIABLES - frequently used colors and sizes used across scss abstracts
+*/
+/*
+ANIMATIONS - styling for the site's animations
+*/
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transfrom: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+/*
+BASE - Resets margin, padding, box-sizing; Sets base font-size;
+
+> Using * to set all padding and margins to 0. Ensures that we are starting with a clean slate.
+
+> The html font-size defines the size of 1rem across the entire site. (The size of 1em is relative to the font size of the containing element and could differ) 
+> 16px is the default text size; changed to 10px for ease of conversion (10 / 16 = 62.5%)
+> 1rem = 10px
+> Useful to easily change font size across the entire site.
+
+> med --> width < 900  (1rem = 9px, 9/16 = 56.25%)
+> sm  --> width < 600  (1rem = 8px, 8/16 = 50%)
+> lg  --> width > 1800 (1rem = 12px, 12/16 = 75%)
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0; }
+
+html {
+  font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+/*
+UTILITIES - classes that may be useful in several places
+*/
+.u-margin-bottom-large {
+  margin-bottom: 4rem !important; }
+  @media (max-width: 37.5em) {
+    .u-margin-bottom-large {
+      margin-bottom: 3.5rem !important; } }
+
+/*
+BUTTON - styles for the site's buttons
+*/
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  position: relative;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
+  transition: all .2s; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(55, 55, 55, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.btn:active, .btn:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(55, 55, 55, 0.2); }
+
+.btn--white {
+  background-color: #f4f4f4;
+  color: #373737; }
+  .btn--white::after {
+    background-color: #f4f4f4; }
+
+.btn--header {
+  background-color: transparent;
+  color: #f4f4f4;
+  border: solid !important;
+  animation-name: moveInBottom;
+  animation-duration: 1s;
+  animation-timing-function: ease-out; }
+  .btn--header::after {
+    background-color: transparent; }
+
+/*
+HEADER - styles the main header of the site
+*/
+.header {
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, rgba(212, 199, 159, 0.8), rgba(66, 59, 37, 0.8)), url(../../img/seamless.png);
+  background-repeat: repeat;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%); }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    backface-visibility: hidden; }
+  .header__title--main {
+    display: block;
+    font-family: 'Lobster', cursive;
+    font-size: 10rem;
+    font-weight: 400;
+    letter-spacing: .5rem;
+    color: #f4f4f4;
+    text-shadow: 0.5rem 0.5rem 0.5rem #423b25;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+    @media (max-width: 75em) {
+      .header__title--main {
+        font-size: 9rem;
+        letter-spacing: .15rem; } }
+    @media (max-width: 56.25em) {
+      .header__title--main {
+        font-size: 7rem; } }
+    @media (max-width: 37.5em) {
+      .header__title--main {
+        font-size: 6rem;
+        letter-spacing: .15rem; } }
+  .header__title--sub {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: .5rem;
+    background: #373737;
+    color: #f4f4f4;
+    box-shadow: 0.5rem 0.5rem 0.5rem #423b25;
+    font-size: 2.5rem;
+    text-align: center;
+    width: 50%;
+    border-radius: 3px;
+    margin: 0 auto 0 auto;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+    @media (max-width: 56.25em) {
+      .header__title--sub {
+        font-size: 2rem;
+        width: 52%; } }
+    @media (max-width: 37.5em) {
+      .header__title--sub {
+        letter-spacing: 0;
+        font-size: 2rem;
+        width: 100%; } }
+  .header .btn {
+    height: 5rem;
+    font-size: 5rem;
+    padding: 1.5rem; }
+    @media (max-width: 37.5em) {
+      .header .btn {
+        height: 3rem;
+        font-size: 3rem; } }

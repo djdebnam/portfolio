@@ -1,0 +1,38 @@
+/*
+BASE - Resets margin, padding, box-sizing; Sets base font-size;
+
+> Using * to set all padding and margins to 0. Ensures that we are starting with a clean slate.
+
+> The html font-size defines the size of 1rem across the entire site. (The size of 1em is relative to the font size of the containing element and could differ) 
+> 16px is the default text size; changed to 10px for ease of conversion (10 / 16 = 62.5%)
+> 1rem = 10px
+> Useful to easily change font size across the entire site.
+
+> med --> width < 900  (1rem = 9px, 9/16 = 56.25%)
+> sm  --> width < 600  (1rem = 8px, 8/16 = 50%)
+> lg  --> width > 1800 (1rem = 12px, 12/16 = 75%)
+*/
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+} 
+
+html {
+    font-size: 62.5%;
+
+    @include responsive(med) {
+        font-size: 56.25%;
+    }
+
+    @include responsive(sm) {
+        font-size: 50%;
+    }
+
+    @include responsive(lg) {
+        font-size: 75%;
+    }
+}

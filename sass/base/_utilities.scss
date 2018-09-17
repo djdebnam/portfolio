@@ -1,0 +1,11 @@
+/*
+UTILITIES - classes that may be useful in several places
+*/
+
+.u-margin-bottom-large {
+    margin-bottom: 4rem !important;
+
+    @include responsive(phone) { 
+        margin-bottom: 3.5rem !important;
+    }
+}
