@@ -1,0 +1,37 @@
+.section-about {
+    position: relative;
+    background-color: $color-grey-light;
+    padding: 20rem 0;
+    // height: 100vh;
+    transform: translateY(-15vh);
+    z-index: 10;
+}
+.section-about-2 {
+    position: relative;
+    background-color: $color-secondary;
+    padding: 20rem 0;
+    // height: 100vh;
+    transform: translateY(-30vh);
+    z-index: 9;
+}
+.after-section-white {
+    position: relative;
+    height: 15vh;
+    background-color: $color-grey-light; 
+    transform: translateY(-15.2vh);
+    clip-path: polygon(0 0, 100% 0, 100% 1%, 50% 100%, 0 1%, 0 0);
+    z-index: 10;
+}
+.after-section-black {
+    position: relative;
+    height: 15vh;
+    background-color: $color-secondary; 
+    transform: translateY(-30.2vh);
+    clip-path: polygon(0 0, 100% 0, 100% 1%, 50% 100%, 0 1%, 0 0);
+    z-index: 10;
+}
+.image-holder {
+    background-color: $color-black;
+    height : 40rem;
+
+}

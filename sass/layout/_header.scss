@@ -9,7 +9,7 @@ HEADER - styles the main header of the site
     position: relative;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
-
+    z-index: 100;
     &__text-box {
         position: absolute;
         top: 50%;
@@ -50,12 +50,12 @@ HEADER - styles the main header of the site
         display: block;
         font-family: 'Roboto', sans-serif;
         letter-spacing: .5rem;
-        background: $color-black;
+        background: $color-secondary;
         color: $color-white;
         box-shadow: .5rem .5rem .5rem $color-primary-dark;
         font-size: 2.5rem;
         text-align: center; 
-        width: 50%;
+        width: 75%;
         border-radius: 3px;
         margin: 0 auto 0 auto;
 
@@ -63,15 +63,17 @@ HEADER - styles the main header of the site
         animation-duration: 1s;
         animation-timing-function: ease-out;
 
+        @include responsive(med) {
+            width: 75%;
+        }
         @include responsive(sm) {
             font-size: 2rem;
-            width: 52%;
+            width: 70%;
             // letter-spacing: .15rem; 
         }
-        @include responsive(phone) { 
-            letter-spacing: 0;
+        @include responsive(phone) {  
             font-size: 2rem;
-            width: 100%; 
+            width: 52%; 
         }
       }
 

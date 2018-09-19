@@ -14,6 +14,14 @@ MIXINS - reusable blocks of code
     -med
     -lg
 */ 
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
 @mixin responsive($size) {
     @if $size == phone {
         @media (max-width: 37.5em) { @content }; // 600px / 16px = 37.5em

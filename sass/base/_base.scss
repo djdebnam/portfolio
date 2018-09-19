@@ -19,11 +19,12 @@ BASE - Resets margin, padding, box-sizing; Sets base font-size;
     margin: 0;
     padding: 0;
     box-sizing: 0;
+    
 } 
 
 html {
     font-size: 62.5%;
-
+    background-color: darkgray;
     @include responsive(med) {
         font-size: 56.25%;
     }

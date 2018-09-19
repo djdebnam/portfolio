@@ -4,7 +4,17 @@ VARIABLES - frequently used colors and sizes used across scss abstracts
 $color-primary: #c0b283;
 $color-primary-light: #d4c79f;
 $color-primary-dark: #423b25; 
+$color-secondary: #373737;
 $color-white: #f4f4f4;
 $color-black: #373737;
+$color-grey-light: #f7f7f7;
+$color-grey-dark: #777;
 
 $default-font-size: 1.6rem;
+
+// GRID
+
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;

@@ -53,6 +53,19 @@ BUTTON - styles for the site's buttons
             background-color: transparent;
         } 
 
+        $button-size: 5rem;
+
+        height: $button-size;
+        font-size: $button-size;
+        padding: 1.5rem;
+
+        @include responsive(phone) { 
+          $button-size: 3rem;
+
+          height: $button-size;
+          font-size: $button-size;
+        }
+
         animation-name: moveInBottom;
         animation-duration: 1s;
         animation-timing-function: ease-out;
