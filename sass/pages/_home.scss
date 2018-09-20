@@ -5,6 +5,10 @@
     // height: 100vh;
     transform: translateY(-15vh);
     z-index: 10;
+
+    @include responsive(sm) {
+        padding: 20rem 0;
+    }
 }
 .section-about-2 {
     position: relative;

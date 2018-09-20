@@ -5,12 +5,12 @@
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
 
-        @include responsive(tab-port) {
+        @include responsive(sm) {
             margin-bottom: $gutter-vertical-small;
         }
     }
 
-    @include responsive(tab-port) {
+    @include responsive(sm) {
         max-width: 50rem;
         padding: 0 3rem;
     }
@@ -22,13 +22,13 @@
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
 
-            @include responsive(tab-port) {
+            @include responsive(sm) {
                 margin-right: 0;
                 margin-bottom: $gutter-vertical-small
             }
         }
 
-        @include responsive(tab-port) {
+        @include responsive(sm) {
             width: 100% !important;
         }
     }
