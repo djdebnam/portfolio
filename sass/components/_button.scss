@@ -47,23 +47,22 @@ BUTTON - styles for the site's buttons
     &--header {
         background-color: transparent;
         color: $color-white;
-        border: solid !important;
-
+        border: solid !important; 
         &::after {
             background-color: transparent;
         } 
 
         $button-size: 5rem;
 
-        height: $button-size;
-        font-size: $button-size;
-        padding: 1.5rem;
+        height: $button-size !important;
+        font-size: $button-size !important;
+        padding: 1.5rem !important;
 
         @include responsive(phone) { 
-          $button-size: 3rem;
+          $button-size: 3rem !important;
 
-          height: $button-size;
-          font-size: $button-size;
+          height: $button-size !important;
+          font-size: $button-size !important;
         }
 
         animation-name: moveInBottom;
