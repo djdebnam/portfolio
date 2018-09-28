@@ -17,6 +17,10 @@ body {
     color: transparent;
     letter-spacing: .2rem;
     
+    &--projects {
+        color: $color-white;
+    }
+
     @include responsive(sm) {
         font-size: 3rem;
     }

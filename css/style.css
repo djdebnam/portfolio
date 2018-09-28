@@ -102,6 +102,8 @@ body {
   background-clip: text;
   color: transparent;
   letter-spacing: .2rem; }
+  .heading-secondary--projects {
+    color: #f4f4f4; }
   @media (max-width: 56.25em) {
     .heading-secondary {
       font-size: 3rem; } }
@@ -159,6 +161,18 @@ BUTTON - styles for the site's buttons
   .btn--white::after {
     background-color: #f4f4f4; }
 
+.btn--primary {
+  background: #c0b283;
+  color: #f4f4f4; }
+  .btn--primary::after {
+    background-color: #f4f4f4; }
+
+.btn--orange {
+  background: #c06014;
+  color: #f4f4f4; }
+  .btn--orange::after {
+    background-color: #f4f4f4; }
+
 .btn--header {
   background-color: transparent;
   color: #f4f4f4;
@@ -179,6 +193,7 @@ BUTTON - styles for the site's buttons
 .card {
   position: relative; }
   .card__picture {
+    position: relative;
     background-size: cover;
     height: 15rem;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
@@ -193,29 +208,29 @@ BUTTON - styles for the site's buttons
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        content: 'H';
+        content: '<';
         font-family: 'linea-basic-10';
         font-size: 10rem;
-        color: #f4f4f4; }
-  .card__heading {
-    font-size: 2.8rem;
+        color: rgba(244, 244, 244, 0.25); }
+  .card__header {
+    font-size: 2.5rem;
     font-weight: 300;
     text-transform: uppercase;
     text-align: center;
     color: #f4f4f4;
     position: absolute;
-    top: 6rem;
-    right: 1rem;
-    width: 75%; }
-    .card__heading-span {
-      padding: 1rem 1.5rem;
-      -webkit-box-decoration-break: clone;
-      box-decoration-break: clone; }
-      .card__heading-span--1 {
-        background-image: linear-gradient(to right bottom, rgba(212, 199, 159, 0.85), rgba(66, 59, 37, 0.85)); }
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    z-index: 5; }
   .card__btn-holder {
     background-color: #f4f4f4;
-    height: 15rem; }
+    padding: 4rem 0 2rem 0;
+    transform: translateY(-2.5rem);
+    text-align: center;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px; }
 
 /*
 COMPOSITION 

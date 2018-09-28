@@ -44,6 +44,22 @@ BUTTON - styles for the site's buttons
         }          
     }
 
+    &--primary {
+        background: $color-primary;
+        color: $color-white;
+        &::after {
+            background-color: $color-white;
+        } 
+    }
+
+    &--orange {
+        background: #c06014;
+        color: $color-white;
+        &::after {
+            background-color: $color-white;
+        } 
+    }
+
     &--header {
         background-color: transparent;
         color: $color-white;
