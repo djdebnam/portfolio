@@ -18,21 +18,20 @@
     transform: translateY(-30vh);
     z-index: 9;
 }
-.after-section-white {
+.after-section {
     position: relative;
-    height: 15vh;
-    background-color: $color-grey-light; 
-    transform: translateY(-15.2vh);
+    height: 15vh; 
     clip-path: polygon(0 0, 100% 0, 100% 1%, 50% 100%, 0 1%, 0 0);
     z-index: 10;
-}
-.after-section-black {
-    position: relative;
-    height: 15vh;
-    background-color: $color-secondary; 
-    transform: translateY(-30.2vh);
-    clip-path: polygon(0 0, 100% 0, 100% 1%, 50% 100%, 0 1%, 0 0);
-    z-index: 10;
+    
+    &-white {
+        background-color: $color-grey-light; 
+        transform: translateY(-15.2vh);
+    }
+    &-black {
+        background-color: $color-secondary; 
+        transform: translateY(-30.2vh);
+    } 
 }
 .image-holder {
     background-color: $color-black;
