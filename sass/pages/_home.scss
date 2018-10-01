@@ -2,7 +2,6 @@
     position: relative;
     background-color: $color-grey-light;
     padding: 20rem 0;
-    // height: 100vh;
     transform: translateY(-15vh);
     z-index: 10;
 
@@ -14,21 +13,30 @@
     position: relative;
     background-color: $color-secondary;
     padding: 20rem 0;
-    // height: 100vh;
     transform: translateY(-30vh);
     z-index: 9;
 }
-.after-section {
+
+.section-contact {
+    position: relative; 
+    // background-color: $color-primary;
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8));
+    padding: 20rem 0;
+    transform: translateY(-45vh);
+}
+
+.after-section {  
     position: relative;
     height: 15vh; 
     clip-path: polygon(0 0, 100% 0, 100% 1%, 50% 100%, 0 1%, 0 0);
     z-index: 10;
-    
-    &-white {
+
+    &-white { 
         background-color: $color-grey-light; 
         transform: translateY(-15.2vh);
     }
-    &-black {
+    &-dark { 
+        z-index: 10;
         background-color: $color-secondary; 
         transform: translateY(-30.2vh);
     } 

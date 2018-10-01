@@ -1,0 +1,29 @@
+.form {
+    &__input {
+        background: $color-secondary;
+        border: none;
+        color:$color-white;
+        padding: 1rem;
+        min-width: 100%;
+        max-width: 100%;
+        outline: none;
+        border-radius: 3px;
+    }
+
+    &__textarea { 
+        height: 15rem;
+    } 
+
+    &-group:not(:last-child), 
+    div[class^="col-"]{
+        margin-bottom: 1.5rem !important; 
+    }
+
+    & .row {
+        width: 50%;
+
+        @include responsive(sm) {
+            width: 75%;
+        }
+    } 
+}

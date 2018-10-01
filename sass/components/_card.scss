@@ -5,8 +5,8 @@
         position: relative;
         background-size: cover;
         height: 15rem;
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
-        clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100.5% 85%, 50% 100%, 0 85%);
+        clip-path: polygon(0 0, 100% 0, 100.5% 85%, 50% 100%, 0 85%);
         border-top-left-radius: 3px;
         border-top-right-radius: 3px; 
         z-index: 5;

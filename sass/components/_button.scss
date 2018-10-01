@@ -7,7 +7,7 @@ BUTTON - styles for the site's buttons
     &:visited {
         text-transform: uppercase;
         text-decoration: none;
-        padding: 1.5rem 4rem;
+        padding: .5rem 3rem;
         display: inline-block;
         border-radius: 10rem;
         position:relative;
@@ -46,14 +46,6 @@ BUTTON - styles for the site's buttons
 
     &--primary {
         background: $color-primary;
-        color: $color-white;
-        &::after {
-            background-color: $color-white;
-        } 
-    }
-
-    &--orange {
-        background: #c06014;
         color: $color-white;
         &::after {
             background-color: $color-white;
