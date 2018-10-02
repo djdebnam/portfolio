@@ -8,11 +8,23 @@
         max-width: 100%;
         outline: none;
         border-radius: 3px;
+
+        &:focus:invalid { 
+            border-bottom: 5px solid #a31f1f;
+        }
+    
+        &:focus:not(:invalid){ 
+            border-bottom: 5px solid #0f5f0f; 
+        }   
     }
 
     &__textarea { 
         height: 15rem;
     } 
+
+    &__group {
+        text-align: center;
+    }
 
     &-group:not(:last-child), 
     div[class^="col-"]{
@@ -21,7 +33,7 @@
 
     & .row {
         width: 50%;
-
+        margin-bottom: 1.5rem !important;
         @include responsive(sm) {
             width: 75%;
         }

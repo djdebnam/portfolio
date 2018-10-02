@@ -253,16 +253,24 @@ COMPOSITION
   max-width: 100%;
   outline: none;
   border-radius: 3px; }
+  .form__input:focus:invalid {
+    border-bottom: 5px solid #a31f1f; }
+  .form__input:focus:not(:invalid) {
+    border-bottom: 5px solid #0f5f0f; }
 
 .form__textarea {
   height: 15rem; }
+
+.form__group {
+  text-align: center; }
 
 .form-group:not(:last-child),
 .form div[class^="col-"] {
   margin-bottom: 1.5rem !important; }
 
 .form .row {
-  width: 50%; }
+  width: 50%;
+  margin-bottom: 1.5rem !important; }
   @media (max-width: 56.25em) {
     .form .row {
       width: 75%; } }
