@@ -11,7 +11,7 @@ body {
     text-transform: uppercase;
     font-weight: 700;
     display: inline-block;
-    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    background-image: linear-gradient(to top, $color-primary-light, $color-primary-dark);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -21,6 +21,9 @@ body {
         color: $color-white;
     }
 
+    &--shadow-primary {
+        text-shadow: 0.5rem 0.5rem 0.5rem #423b25;
+    }
     @include responsive(sm) {
         font-size: 3rem;
     }

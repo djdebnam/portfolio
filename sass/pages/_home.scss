@@ -1,29 +1,48 @@
-.section-about {
+.section {
     position: relative;
-    background-color: $color-grey-light;
-    padding: 20rem 0;
-    transform: translateY(-15vh);
-    z-index: 10;
+    padding: 20rem 0 10rem;
 
-    @include responsive(sm) {
-        padding: 20rem 0;
+    &-about {
+        background-color: $color-grey-light;
+        top: -15vh;
+        margin-bottom: -15vh;
+        z-index: 10;
+    }
+
+    &-projects {
+        background-color: $color-secondary;
+        top: 15vh;
+        margin-bottom:15vh;
+        z-index: 9;
+    }
+
+    &-contact {
+        background-image: linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)), url(./../img/seamless.png); 
+        // background-size: cover;
+        background-repeat: repeat;
     }
 }
-.section-projects {
-    position: relative;
-    background-color: $color-secondary;
-    padding: 20rem 0;
-    transform: translateY(-30vh);
-    z-index: 9;
-}
 
-.section-contact {
-    position: relative; 
-    // background-color: $color-primary;
-    background-image: linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8));
-    padding: 20rem 0;
-    transform: translateY(-45vh);
-}
+// .section-about {
+//     position: relative;
+//     padding: 20rem 0 10rem;
+    
+
+//     // @include responsive(sm) {
+//     //     padding: 20rem 0;
+//     // }
+// }
+// .section-projects {
+//     position: relative;
+//     padding: 20rem 0 10rem;
+    
+// }
+
+// .section-contact {
+//     position: relative; 
+//     background-image: linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8));
+//     padding: 20rem 0 10rem;
+// }
 
 .after-section {  
     position: relative;
@@ -33,12 +52,14 @@
 
     &-white { 
         background-color: $color-grey-light; 
-        transform: translateY(-15.2vh);
+        top: -0.2vh;
+        margin-bottom: -30.2vh;
     }
     &-dark { 
         z-index: 10;
         background-color: $color-secondary; 
-        transform: translateY(-30.2vh);
+        top: -0.2vh;
+        margin-bottom: -15vh;
     } 
 }
 .image-holder {

@@ -8,7 +8,7 @@
         max-width: 100%;
         outline: none;
         border-radius: 3px;
-
+        box-shadow: 0.5rem 0.5rem 0.5rem #423b25;
         &:focus:invalid { 
             border-bottom: 5px solid #a31f1f;
         }
@@ -19,14 +19,18 @@
     }
 
     &__textarea { 
-        height: 15rem;
+        height: 8rem;
     } 
 
-    &__group {
+    &__submit {
         text-align: center;
     }
 
-    &-group:not(:last-child), 
+    & .heading-secondary {
+        text-shadow: 0.5rem 0.5rem 0.5rem #423b25;
+    }
+
+    &__group:not(:last-child), 
     div[class^="col-"]{
         margin-bottom: 1.5rem !important; 
     }
