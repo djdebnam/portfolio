@@ -18,31 +18,9 @@
 
     &-contact {
         background-image: linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)), url(./../img/seamless.png); 
-        // background-size: cover;
         background-repeat: repeat;
     }
 }
-
-// .section-about {
-//     position: relative;
-//     padding: 20rem 0 10rem;
-    
-
-//     // @include responsive(sm) {
-//     //     padding: 20rem 0;
-//     // }
-// }
-// .section-projects {
-//     position: relative;
-//     padding: 20rem 0 10rem;
-    
-// }
-
-// .section-contact {
-//     position: relative; 
-//     background-image: linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8));
-//     padding: 20rem 0 10rem;
-// }
 
 .after-section {  
     position: relative;

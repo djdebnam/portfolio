@@ -262,7 +262,9 @@ COMPOSITION
     border-bottom: 5px solid #0f5f0f; }
 
 .form__textarea {
-  height: 8rem; }
+  height: 8rem;
+  min-height: 8rem;
+  max-height: 20rem; }
 
 .form__submit {
   text-align: center; }
@@ -333,6 +335,34 @@ COMPOSITION
     line-height: 1; }
   .popup:hover {
     color: #c0b283; }
+
+.footer {
+  background: #373737;
+  padding: 5rem 0 2.5rem;
+  font-size: 1.4rem;
+  color: #f7f7f7;
+  text-align: center; }
+  .footer__navigation {
+    border-top: 1px solid #777;
+    padding: 2rem;
+    display: inline-block; }
+  .footer__list {
+    list-style: none; }
+  .footer__item {
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 1.5rem; }
+  .footer__link:link, .footer__link:visited {
+    color: #f7f7f7;
+    background-color: #373737;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all .2s; }
+  .footer__link:hover, .footer__link:active {
+    color: #c0b283;
+    box-shadow: 0 1rem 2rem rgba(55, 55, 55, 0.4);
+    transform: rotate(5deg) scale(1.3); }
 
 .row {
   max-width: 114rem;

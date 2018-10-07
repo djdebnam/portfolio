@@ -20,6 +20,8 @@
 
     &__textarea { 
         height: 8rem;
+        min-height: 8rem;
+        max-height: 20rem;
     } 
 
     &__submit {

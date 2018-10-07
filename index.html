@@ -77,7 +77,7 @@
         </section>
         <div class="after-section after-section-dark"></div>
 
-        <section class="section section-contact">
+        <section class="section section-contact" id="contact">
             <div class="u-center-text u-margin-bottom-large">
                 <h2 class="heading-secondary heading-secondary--white heading-secondary--shadow-primary">
                     You know where to find me
@@ -88,18 +88,17 @@
                     <div class="row">
                         <div class="col-1-of-3">
                             <div class="form__group">
-                                <input type="text" class="form__input" placeholder="Name" id="name" required>
+                                <input type="text" class="form__input" placeholder="Name" id="name" maxlength="50" required>
                                 <label for="name" class="form__label">Name</label>
                             </div>
                             <div class="form__group">
-                                <input type="email" class="form__input" placeholder="Email" id="email" required>
+                                <input type="email" class="form__input" placeholder="Email" id="email" maxlength="50" required>
                                 <label for="email" class="form__label">Email</label>
                             </div>
                         </div>
                         <div class="col-2-of-3">
                             <div class="form__group">
-                                <textarea name="Message" id="message" class="form__input form__textarea" placeholder="Message"
-                                    required></textarea>
+                                <textarea name="Message" id="message" class="form__input form__textarea" placeholder="Message"  maxlength="1000" required></textarea>
                                 <label for="message" class="form__label">Message</label>
                             </div> 
                         </div>
@@ -110,8 +109,22 @@
                 </form>
             </div>
         </section>
-        <footer>
-
+        <footer class="footer">
+            <div class="row">
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#about" class="footer__link">About</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#projects" class="footer__link">Projects</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#contact" class="footer__link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </footer>
     </main>
 
