@@ -10,6 +10,13 @@ UTILITIES - classes that may be useful in several places
     }
 }
 
+.u-margin-bottom-small {
+    margin-bottom: 1rem !important;
+
+    @include responsive(phone) { 
+        margin-bottom: .5rem !important;
+    }
+}
 .u-center-text {
     text-align: center !important;
 }

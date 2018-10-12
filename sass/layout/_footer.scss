@@ -6,7 +6,7 @@
     text-align: center;
 
 
-    @include respond(tab-port) {
+    @include responsive(tab-port) {
         padding: 3rem 0;
     }
 
