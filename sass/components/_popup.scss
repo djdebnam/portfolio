@@ -17,14 +17,30 @@
         background-color: $color-white;
         box-shadow: 0 2rem 4rem rgba($color-black, .2);
         border-radius: 3px;
-        display: table;
+       
         overflow: hidden;
         opacity: 0;
         transform: translate(-50%, -50%) scale(.25);
-        transition: all .4s .2s;
+        transition: all .4s .2s; 
+    }
+
+    &__layout {
+        display: table;
 
         @include responsive(sm) {
-            display: initial;
+            display: initial; 
+        }
+    }
+
+    &__left {
+        width: 80%;
+        display: table-cell; 
+        padding: 3rem 0 0 3rem;
+
+        @include responsive(sm) { 
+            padding: 3rem 3rem 0 3rem;
+            width: auto;
+            display: block;
         }
     }
 
@@ -33,13 +49,13 @@
         height: 100%;
         display: table-cell;
         position: absolute;
-    }
 
-    &__left {
-        width: 80%;
-        display: table-cell; 
-        padding: 3rem 0 0 3rem;
-    }
+        @include responsive(sm) {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    } 
 
     &__item {
         list-style-type: none;  
@@ -49,6 +65,14 @@
         &:not(:last-child) {
             margin-bottom: 1rem;
         }; 
+
+        @include responsive(sm) { 
+            display: inline;
+
+            &:not(:last-child):after {
+                content: "\00b7";
+            };
+        }
     }
 
     &__list {
@@ -57,31 +81,50 @@
         top: 50%;
         left: 50%;
         
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);  
 
+        @include responsive(sm) {
+            margin: 2rem 0 0 0;
+        }
     }
 
     &__text { 
         font-size: 1.4rem;
         margin-bottom: 2rem; 
         width: 100%;
+        
         &-holder {   
             max-height: 30rem;
             width: 100%;
-            overflow-y: hidden;
-            &:hover{
-                overflow-y: scroll;
-            } 
+            overflow-y: scroll;  
             
+
+            &::-webkit-scrollbar {
+                background: transparent;
+                width: 1rem;
+                &-thumb {
+                    opacity : 0;
+                    border-radius: 5px; 
+                    background: $color-grey-dark;
+                    @include responsive(sm) {
+                        opacity: 1;
+                    }
+                }
+            } 
         }
     }
  
     &__button-holder {
         text-align: center;
-        margin: 3rem 0;
+        margin: 2rem 0;
+        width: 100%;
 
-        & .btn-text:not(:last-child) {
+        & .btn-link:not(:last-child) {
             margin-right: 1rem; 
+        }
+
+        @include responsive(sm) {
+            margin: 4rem 0 2rem 0;
         }
     }
     // Open states
@@ -107,6 +150,7 @@
             display: inline-block;
             transition: all .2s;
             line-height: 1;
+            z-index: 10000;
         }
 
         &:hover {
@@ -114,3 +158,4 @@
         }
     } 
 }
+

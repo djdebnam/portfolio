@@ -101,11 +101,14 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  letter-spacing: .2rem; }
+  letter-spacing: .2rem;
+  transition: all .2s; }
   .heading-secondary--white {
     color: #f4f4f4; }
   .heading-secondary--shadow-primary {
     text-shadow: 0.5rem 0.5rem 0.5rem #423b25; }
+  .heading-secondary--hover:hover {
+    transform: scaleX(1.1) scaleY(1.2); }
   @media (max-width: 56.25em) {
     .heading-secondary {
       font-size: 3rem; } }
@@ -192,7 +195,7 @@ BUTTON - styles for the site's buttons
       height: 3rem !important !important;
       font-size: 3rem !important !important; } }
 
-.btn-text:link, .btn-text:visited {
+.btn-link:link, .btn-link:visited {
   font-size: 1.6rem;
   color: #c0b283;
   display: inline-block;
@@ -201,13 +204,13 @@ BUTTON - styles for the site's buttons
   padding: 3px;
   transition: all .2s; }
 
-.btn-text:hover {
+.btn-link:hover {
   background-color: #c0b283;
   color: #f4f4f4;
   box-shadow: 0 1rem 2rem rgba(55, 55, 55, 0.15);
   transform: translateY(-2px); }
 
-.btn-text:active {
+.btn-link:active {
   box-shadow: 0 0.5rem 1rem rgba(55, 55, 55, 0.15);
   transform: translateY(0px); }
 
@@ -328,35 +331,54 @@ COMPOSITION
     background-color: #f4f4f4;
     box-shadow: 0 2rem 4rem rgba(55, 55, 55, 0.2);
     border-radius: 3px;
-    display: table;
     overflow: hidden;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.25);
     transition: all .4s .2s; }
+  .popup__layout {
+    display: table; }
     @media (max-width: 56.25em) {
-      .popup__content {
+      .popup__layout {
         display: initial; } }
+  .popup__left {
+    width: 80%;
+    display: table-cell;
+    padding: 3rem 0 0 3rem; }
+    @media (max-width: 56.25em) {
+      .popup__left {
+        padding: 3rem 3rem 0 3rem;
+        width: auto;
+        display: block; } }
   .popup__right {
     width: 20%;
     height: 100%;
     display: table-cell;
     position: absolute; }
-  .popup__left {
-    width: 80%;
-    display: table-cell;
-    padding: 3rem 0 0 3rem; }
+    @media (max-width: 56.25em) {
+      .popup__right {
+        display: block;
+        width: 100%;
+        height: auto; } }
   .popup__item {
     list-style-type: none;
     font-weight: bold;
     font-size: 1.5rem; }
     .popup__item:not(:last-child) {
       margin-bottom: 1rem; }
+    @media (max-width: 56.25em) {
+      .popup__item {
+        display: inline; }
+        .popup__item:not(:last-child):after {
+          content: "\00b7"; } }
   .popup__list {
     text-align: center;
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+    @media (max-width: 56.25em) {
+      .popup__list {
+        margin: 2rem 0 0 0; } }
   .popup__text {
     font-size: 1.4rem;
     margin-bottom: 2rem;
@@ -364,14 +386,26 @@ COMPOSITION
     .popup__text-holder {
       max-height: 30rem;
       width: 100%;
-      overflow-y: hidden; }
-      .popup__text-holder:hover {
-        overflow-y: scroll; }
+      overflow-y: scroll; }
+      .popup__text-holder::-webkit-scrollbar {
+        background: transparent;
+        width: 1rem; }
+        .popup__text-holder::-webkit-scrollbar-thumb {
+          opacity: 0;
+          border-radius: 5px;
+          background: #777; }
+          @media (max-width: 56.25em) {
+            .popup__text-holder::-webkit-scrollbar-thumb {
+              opacity: 1; } }
   .popup__button-holder {
     text-align: center;
-    margin: 3rem 0; }
-    .popup__button-holder .btn-text:not(:last-child) {
+    margin: 2rem 0;
+    width: 100%; }
+    .popup__button-holder .btn-link:not(:last-child) {
       margin-right: 1rem; }
+    @media (max-width: 56.25em) {
+      .popup__button-holder {
+        margin: 4rem 0 2rem 0; } }
   .popup:target {
     opacity: 1;
     visibility: visible; }
@@ -387,7 +421,8 @@ COMPOSITION
     text-decoration: none;
     display: inline-block;
     transition: all .2s;
-    line-height: 1; }
+    line-height: 1;
+    z-index: 10000; }
   .popup__close:hover {
     color: #c0b283; }
 

@@ -16,13 +16,20 @@ body {
     background-clip: text;
     color: transparent;
     letter-spacing: .2rem;
-    
+    transition: all .2s; 
+
     &--white {
         color: $color-white;
     }
 
     &--shadow-primary {
         text-shadow: 0.5rem 0.5rem 0.5rem #423b25;
+    }
+
+    &--hover {
+        &:hover {
+            transform: scaleX(1.1) scaleY(1.2);
+        }
     }
     @include responsive(sm) {
         font-size: 3rem;
