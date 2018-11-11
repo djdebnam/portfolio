@@ -5,7 +5,6 @@ const express = require('express'),
     config = require('./config'),
     port = process.env.PORT || 3333;
 
-console.log('key', process.env.SENDGRID_API_KEY);
 sgMail.setApiKey(config.sendgrid);
 
 app.use(express.static(`${__dirname}/../client`));
