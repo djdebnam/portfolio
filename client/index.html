@@ -24,9 +24,9 @@
         
                 <nav class="navigation__nav">
                     <ul class="navigation__list">
-                        <li class="naviation__item"><a href="#about" class="navigation__link"><span>01</span>About</a></li>
-                        <li class="naviation__item"><a href="#projects" class="navigation__link"><span>02</span>Projects</a></li>
-                        <li class="naviation__item"><a href="#contact" class="navigation__link"><span>03</span>Contact</a></li>
+                        <li class="naviation__item"><a href="#about" class="navigation__link" onclick="closeNavigation()"><span>01</span>About</a></li>
+                        <li class="naviation__item"><a href="#projects" class="navigation__link" onclick="closeNavigation()"><span>02</span>Projects</a></li>
+                        <li class="naviation__item"><a href="#contact" class="navigation__link" onclick="closeNavigation()"><span>03</span>Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -87,7 +87,7 @@
                         </h4>
                     </div>
                     <div class="card__btn-holder">
-                        <a href="#portfolio" class="btn btn--primary">View</a>
+                        <a href="#portfolio" class="btn btn--primary" onclick="disableScroll()">View</a>
                     </div>
                 </div>
             </div>
@@ -101,7 +101,7 @@
                 </h2>
             </div>
             <div class="contact__form">
-                <form action="#" class="form">
+                <form action="#" class="form" name="form" id="form" onsubmit="submitForm(event)">
                     <div class="row">
                         <div class="col-1-of-3">
                             <div class="form__group">
@@ -152,7 +152,7 @@
         <div class="popup__content">
             <div class="popup__layout">
                 <div class="popup__left">
-                    <a href="#projects" class="popup__close">&times;</a>
+                    <a href="#projects" class="popup__close" onclick="enableScroll()">&times;</a>
                     <div>
                         <h2 class="heading-secondary u-margin-bottom-small">Portfolio Site</h2>
                         <div class="popup__text-holder">
@@ -207,6 +207,7 @@
         </div>
     </div>
 
+    <script src="js/scripts.js"></script> 
 </body>
 
 </html>

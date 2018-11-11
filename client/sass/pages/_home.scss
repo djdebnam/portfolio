@@ -25,6 +25,7 @@
 .after-section {  
     position: relative;
     height: 15vh; 
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 1%, 50% 100%, 0 1%, 0 0);
     clip-path: polygon(0 0, 100% 0, 100% 1%, 50% 100%, 0 1%, 0 0);
     z-index: 10;
 
